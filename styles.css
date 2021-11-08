@@ -1,0 +1,157 @@
+@keyframes fall {
+  from {
+    margin-top: -50em;
+  }
+  to {
+    margin-top: 7em;
+  }
+}
+
+* {
+  font-family: poppins;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+/* *::selection{
+    background-color: transparent;
+   } */
+body {
+  background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+  user-select: none;
+}
+main {
+  animation-name: fall;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  border-radius: 30px;
+  border: 1px solid 212529;
+  margin: 5em auto;
+  background-color: #212529;
+  width: 25vw;
+  height: 65vh;
+  display: flex;
+  text-align: center;
+  /* padding: 10px; */
+}
+section {
+  /* border: 1px solid yellow; */
+  margin: auto;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  height: 90%;
+}
+#display {
+  border-radius: 10px;
+  /* display: none; */
+  /* border: 1px solid yellow; */
+  background-color: #ced4da;
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#buttons {
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+}
+
+button {
+  /* border-radius: 5px; */
+  color: #212529;
+  background-color: #ced4da;
+  border: 1px solid #212529;
+  font-size: 30px;
+  /* height: 50px; */
+}
+button:hover {
+  background-color: #adb5bd;
+}
+
+#clear {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-top-left-radius: 10px;
+}
+#delete {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  border-top-right-radius: 10px;
+}
+#corner3 {
+  border-bottom-left-radius: 10px;
+}
+#corner4 {
+  border-bottom-right-radius: 10px;
+}
+
+h5,
+h3 {
+  text-align: end;
+  margin: 20px;
+  font-family: montserrat;
+}
+h5 {
+  /* margin-top: 50px; */
+  font-size: 1.1em;
+}
+h3 {
+  font-size: 2em;
+}
+
+#theme-div {
+  margin: 1.5em;
+}
+select {
+  border-radius: 4px;
+  text-align: center;
+}
+@keyframes logo {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(1.3) rotate(360deg);
+  }
+}
+
+#copyright {
+  /* bottom: 50%; */
+  left: 0;
+  right: 0;
+  bottom: 1em;
+  /* transform: translateX(-50%); */
+  position: fixed;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid blueviolet; */
+  width: 20vw;
+}
+#github {
+  height: 25px;
+  margin-left: 10px;
+}
+#github:hover {
+  animation-name: logo;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  /* transition: 0.5s;
+    transform: rotate(360deg);
+    transform: scale(1.1); */
+}
+a,
+img {
+  padding-top: 2px;
+}
